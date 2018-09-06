@@ -47,7 +47,7 @@ $a.each(function(){
     var myindex = $(this).index();
     var b = myindex - index;
     if(b == 0){
-        return;
+      return;
     }
     else if(b > 0) {
       /*

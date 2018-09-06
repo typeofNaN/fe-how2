@@ -1,0 +1,365 @@
+:root {
+  --grass: #01ac0d;
+  --sky: #4295ff;
+  --black: #111;
+  --grey: #383838;
+  --white: #fff;
+  --wood: #4f1708;
+  --wood-top: #c48620;
+  --chain: #65678b;
+  --chain-highlight: #e8e7e7;
+  --mouth: #8b0502;
+  --tooth: #efecf7;
+  --chomp-size: 300px;
+  --eye-separation: 22px;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--sky);
+  background: linear-gradient(to bottom, var(--sky) 0%, var(--white)100%);
+}
+
+.chain-chomp-wrapper {
+  position: relative;
+  width: var(--chomp-size);
+  height: var(--chomp-size);
+  animation: chomp-bounce 0.5s cubic-bezier(0.5, 0.05, 1, 0.5);
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+}
+
+.ground {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: calc(50vh - 100px);
+  background-color: var(--grass);
+}
+
+.post-wrapper {
+  display: block;
+  position: absolute;
+  left: calc(50vw - 350px);
+  bottom: calc(50vh - 120px);
+}
+
+.post {
+  position: relative;
+  width: 30px;
+  height: 100px;
+  background-color: var(--wood);
+}
+
+.post:before {
+  display: block;
+  position: absolute;
+  top: -5px;
+  left: 0;
+  width: 100%;
+  height: 10%;
+  border-radius: 50%;
+  background-color: var(--wood-top);
+  content: '';
+}
+
+.post:after {
+  display: block;
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 10%;
+  border-radius: 50%;
+  background-color: var(--wood);
+  content: '';
+}
+
+.chain-ball {
+  position: absolute;
+  top: 54px;
+  left: 30px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--chain);
+  background: radial-gradient(circle at 2px 2px, var(--chain-highlight), var(--chain));
+}
+
+.chain-ball-1 {
+  left: 25px;
+  animation: chain-ball-bounce-1 0.5s cubic-bezier(0.5, 0.05, 1, 0.5);
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+}
+
+.chain-ball-2 {
+  left: 85px;
+  animation: chain-ball-bounce-2 0.5s cubic-bezier(0.5, 0.05, 1, 0.5);
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+}
+
+.chain-ball-3 {
+  left: 145px;
+  animation: chain-ball-bounce-3 0.5s cubic-bezier(0.5, 0.05, 1, 0.5);
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+}
+
+.chain-ball-4 {
+  left: 205px;
+  animation: chain-ball-bounce-4 0.5s cubic-bezier(0.5, 0.05, 1, 0.5);
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+}
+
+.chain-chomp {
+  position: relative;
+  width: var(--chomp-size);
+  height: var(--chomp-size);
+  overflow: hidden;
+  border-radius: 50%;
+  background: var(--black);
+  background: radial-gradient(circle at 50px 50px, var(--grey), var(--black));
+  transform: scale(1);
+  transition: transform 0.4s;
+  cursor: default;
+}
+
+.chain-chomp:hover {
+  transform: scale(1.5);
+}
+
+.chain-chomp:hover .mouth {
+  transform: scaleY(2);
+  animation: none;
+}
+
+.chain-chomp:hover .eye {
+  animation: none;
+}
+
+.eye {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  position: absolute;
+  top: 85px;
+  background-color: var(--white);
+  animation: turn-face-left-right 5s ease-out infinite;
+}
+
+.inner-eye {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: var(--black);
+}
+
+.left-eye {
+  left: var(--eye-separation);
+}
+
+.right-eye {
+  right: var(--eye-separation);
+}
+
+.mouth {
+  overflow: hidden;
+  width: calc(100% - 25px);
+  height: 45px;
+  border-radius: 50%;
+  margin: 0 auto;
+  position: absolute;
+  top: 180px;
+  left: 0;
+  right: 0;
+  transition: transform 0.2s;
+  transform: scaleY(1);
+  animation: turn-face-left-right 5s ease-out infinite;
+}
+
+.mouth-upper-wrap,
+.mouth-lower-wrap {
+  position: absolute;
+  height: 50%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.mouth-lower-wrap {
+  top: 50%;
+}
+
+.mouth-upper,
+.mouth-lower {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 225%;
+  width: 100%;
+  background: var(--mouth);
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.mouth-lower {
+  top: initial;
+  bottom: 0;
+}
+
+.mouth-upper:before {
+  position: absolute;
+  top: 55%;
+  content: '';
+  width: 100%;
+  height: 3px;
+  background-color: var(--mouth);
+}
+
+.tooth {
+  position: absolute;
+  width: 0;
+  height: 0;
+  z-index: 1;
+}
+
+.upper-tooth {
+  top: 0;
+  border-left: 20px inset transparent;
+  border-right: 20px solid transparent;
+  border-top: 20px solid var(--tooth);
+  transform-origin: 50% 0%;
+}
+
+.lower-tooth {
+  bottom: 0;
+  border-left: 20px inset transparent;
+  border-right: 20px inset transparent;
+  border-bottom: 20px solid var(--tooth);
+  transform-origin: 50% 100%;
+  transform: translateX(-40%);
+}
+
+.tooth-u1,
+.tooth-l1 {
+  left: -2%;
+}
+
+.tooth-u2,
+.tooth-l2 {
+  left: 7%;
+}
+
+.tooth-u3,
+.tooth-l3 {
+  left: 17%;
+}
+
+.tooth-u4,
+.tooth-l4 {
+  left: 30%;
+}
+
+.tooth-u5,
+.tooth-l5 {
+  left: 45%;
+}
+
+.tooth-u6,
+.tooth-l6 {
+  left: 60%;
+}
+
+.tooth-u7,
+.tooth-l7 {
+  left: 73%;
+}
+
+.tooth-u8,
+.tooth-l8 {
+  left: 83%;
+}
+
+.tooth-u9,
+.tooth-l9 {
+  left: 90%;
+}
+
+.shadow {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  bottom: calc(50vh - 200px);
+  width: 205px;
+  height: 20px;
+  background-color: var(--grey);
+  opacity: 0.2;
+  border-radius: 50%;
+  animation: shadow 0.5s cubic-bezier(0.5, 0.05, 1, 0.5);
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+}
+
+@keyframes chain-ball-bounce-1 {
+  from { transform:translate3d(0px,0px,0px);}
+  to { transform:translate3d(0px,2px,0px);}
+}
+
+@keyframes chain-ball-bounce-2 {
+  from { transform:translate3d(0px,0px,0px);}
+  to { transform:translate3d(0px,8px,0px);}
+}
+
+@keyframes chain-ball-bounce-3 {
+  from { transform:translate3d(0px,0px,0px);}
+  to { transform:translate3d(0px,16px,0px);}
+}
+
+@keyframes chain-ball-bounce-4 {
+  from { transform:translate3d(0px,0px,0px);}
+  to { transform:translate3d(0px,24px,0px);}
+}
+
+@keyframes chomp-bounce {
+  from { transform:translate3d(0px,0px,0px);}
+  to { transform:translate3d(0px,50px,0px);}
+}
+
+@keyframes shadow {
+  from { transform: scale(0.5);}
+  to { transform: scale(1);}
+}
+
+@keyframes turn-face-left-right {
+  0% {
+    transform: none;
+  }
+  20% {
+    transform: translateX(-32px) translateY(0px) skewX(-4deg) skewY(-2deg) scale(0.95);
+  }
+  25%, 44% {
+    transform: none;
+  }
+  50%, 60% {
+    transform: translateX(24px) translateY(0px) skewX(4deg) skewY(2deg) scaleX(0.95);
+  }
+  66%, 100% {
+    transform: none;
+  }
+}

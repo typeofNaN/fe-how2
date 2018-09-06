@@ -1,0 +1,1 @@
+Some JavaScript file about Front-end demo use jQuery.
