@@ -25,9 +25,9 @@
 
       var xhr = new XMLHttpRequest();
 
-      xhr.open("post","https://www.apiopen.top/novelSearchApi",true);
+      xhr.open("post","https://www.apiopen.top/weatherApi",true);
       xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded;");
-      xhr.send("name=" + city);
+      xhr.send("city=" + city);
 
       xhr.onreadystatechange = function() {
         if (xhr.readyState == 4 && xhr.status == 200) {
