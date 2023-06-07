@@ -1,14 +1,16 @@
-*{
+* {
   margin: 0;
   padding: 0;
 }
-.box{
+
+.box {
   position: relative;
   margin: 300px auto 0;
   width: 1300px;
   height: 340px;
 }
-.list{
+
+.list {
   position: absolute;
   left: 50%;
   margin-left: -600px;
@@ -16,7 +18,8 @@
   height: 300px;
   overflow: hidden;
 }
-.btn{
+
+.btn {
   position: absolute;
   top: 50%;
   margin-top: -70px;
@@ -27,13 +30,15 @@
   color: white;
   text-decoration: none;
   text-align: center;
-  background: rgba(0,255,0,.5);
+  background: rgba(0, 255, 0, .5);
   cursor: pointer;
 }
-.next{
+
+.next {
   right: 0;
 }
-li{
+
+li {
   position: absolute;
   top: 0;
   left: 0;
@@ -41,42 +46,51 @@ li{
   opacity: 0;
   transition: all 0.3s ease-out;
 }
-img{
+
+img {
   float: left;
   width: 751px;
   height: 300px;
-  border:none;
+  border: none;
 }
-.p1{
-  transform:translate3d(-224px,0,0) scale(0.81);
+
+.p1 {
+  transform: translate3d(-224px, 0, 0) scale(0.81);
 }
-.p2{
-  transform:translate3d(0px,0,0) scale(0.81);
-  transform-origin:0 50%;
+
+.p2 {
+  transform: translate3d(0px, 0, 0) scale(0.81);
+  transform-origin: 0 50%;
   opacity: 0.8;
   z-index: 2;
 }
-.p3{
-  transform:translate3d(224px,0,0) scale(1);
+
+.p3 {
+  transform: translate3d(224px, 0, 0) scale(1);
   z-index: 3;
   opacity: 1;
 }
-.p4{
-  transform:translate3d(449px,0,0) scale(0.81);
-  transform-origin:100% 50%;
+
+.p4 {
+  transform: translate3d(449px, 0, 0) scale(0.81);
+  transform-origin: 100% 50%;
   opacity: 0.8;
   z-index: 2;
 }
-.p5{
-  transform:translate3d(672px,0,0) scale(0.81);
+
+.p5 {
+  transform: translate3d(672px, 0, 0) scale(0.81);
 }
-.p6{
-  transform:translate3d(896px,0,0) scale(0.81);
+
+.p6 {
+  transform: translate3d(896px, 0, 0) scale(0.81);
 }
-.p7{
-  transform:translate3d(1120px,0,0) scale(0.81);
+
+.p7 {
+  transform: translate3d(1120px, 0, 0) scale(0.81);
 }
-.buttons{
+
+.buttons {
   position: absolute;
   left: 50%;
   bottom: 0;
@@ -86,19 +100,22 @@ img{
   height: 30px;
   text-align: center;
 }
-.buttons a{
+
+.buttons a {
   display: inline-block;
   padding-top: 4px;
   width: 35px;
   height: 5px;
   cursor: pointer;
 }
-span{
+
+span {
   display: block;
   width: 35px;
   height: 1px;
   background: red;
 }
-.blue{
+
+.blue {
   background: blue;
 }

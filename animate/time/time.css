@@ -6,7 +6,7 @@ svg {
   max-height: 80vw;
   top: 50%;
   left: 50%;
-  transform: translate3d(-50%,-50%,0px);
+  transform: translate3d(-50%, -50%, 0px);
 }
 
 * {
@@ -18,72 +18,91 @@ svg {
 body {
   background: #F3F6F7;
 }
+
 body .f1 {
   fill: #181F22;
 }
+
 body .f2 {
   fill: #F3F6F7;
 }
 
-
 #frog {
   background: #181F22;
 }
+
 #frog .f1 {
   fill: #0EF998;
 }
+
 #frog .s1 {
   stroke: #0EF998;
 }
+
 #frog .f2 {
   fill: #181F22;
 }
+
 #frog .s2 {
   stroke: #181F22;
 }
+
 #sol {
   background: #181F22;
 }
+
 #sol .f1 {
   fill: #F90E5A;
 }
+
 #sol .s1 {
   stroke: #F90E5A;
 }
+
 #sol .f2 {
   fill: #181F22;
 }
+
 #sol .s2 {
   stroke: #181F22;
 }
+
 #wasp {
   background: #181F22;
 }
+
 #wasp .f1 {
   fill: #FFF532;
 }
+
 #wasp .s1 {
   stroke: #FFF532;
 }
+
 #wasp .f2 {
   fill: #181F22;
 }
+
 #wasp .s2 {
   stroke: #181F22;
 }
+
 #terra {
   background: #E76054;
 }
+
 #terra .f1 {
   fill: #ECF1CC;
 }
+
 #terra .s1 {
   stroke: #ECF1CC;
 }
+
 #terra .f2 {
   fill: #E76054;
 }
+
 #terra .s2 {
   stroke: #E76054;
 }
-

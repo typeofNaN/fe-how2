@@ -7,12 +7,12 @@ function url2json(url) {
     arr = [],
     length = 0,
     res = {};
-  if(url.indexOf('?') != -1) {
+  if (url.indexOf('?') != -1) {
     index = url.indexOf('?');
     str = url.substring(index + 1);
     arr = str.split('&');
     length = arr.length;
-    for(var i = 0; i < length - 1; i++) {
+    for (var i = 0; i < length - 1; i++) {
       res[arr[i].split('=')[0]] = arr[i].split('=')[1];
     }
   }
@@ -26,14 +26,14 @@ var result = url2json(url);
 
 // 获取json的键值对条数
 var length = 0;
-for(var i in result) {
+for (var i in result) {
   length++;
 }
 
 // 在页面输出
 var list = 0;
 document.write('{<br>');
-for(var name in result) {
+for (var name in result) {
   list++;
   (list == length) ? document.write('' + name + ':' + result[name] + '<br>') : document.write('' + name + ':' + result[name] + ',<br>');
 }

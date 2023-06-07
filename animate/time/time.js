@@ -22,7 +22,7 @@ function stringPos(obj) {
   return obj.x + "," + obj.y;
 }
 
-// Easings
+// Easing
 function oscillate(t) {
   return Math.sin(rad(180 * t));
 }
@@ -130,4 +130,3 @@ function draw() {
 }
 
 draw();
-

@@ -2,12 +2,16 @@
   padding: 0;
   margin: 0;
 }
-ul, ol {
+
+ul,
+ol {
   list-style: none;
 }
+
 a {
   text-decoration: none;
 }
+
 .carousel {
   width: 1080px;
   height: 432px;
@@ -15,6 +19,7 @@ a {
   margin: 50px auto;
   position: relative;
 }
+
 .carousel .imgs ul li {
   /*呼吸 所有图片摞在一起*/
   width: 1080px;
@@ -24,24 +29,28 @@ a {
   top: 0px;
   display: none;
 }
+
 .carousel .imgs ul li:first-child {
   display: block;
 }
+
 .carousel .btns a {
   position: absolute;
   top: 50%;
   margin-top: -30px;
   width: 30px;
   height: 60px;
-  background-color: rgba(0,0,0,.3);
+  background-color: rgba(0, 0, 0, .3);
   color: #fff;
   font-size: 30px;
   text-align: center;
   line-height: 60px;
 }
+
 .carousel .btns a.rightBtn {
   right: 0px;
 }
+
 .carousel .circles {
   position: absolute;
   width: 200px;
@@ -51,9 +60,11 @@ a {
   bottom: 30px;
   overflow: hidden;
 }
+
 .carousel .circles ol {
   width: 210px;
 }
+
 .carousel .circles ol li {
   float: left;
   width: 20px;
@@ -66,6 +77,7 @@ a {
   border-radius: 10px;
   cursor: pointer;
 }
+
 .carousel .circles ol li.cur {
   background-color: yellow;
 }

@@ -7,12 +7,12 @@ var amount = $circles.length;// 数量
 var timer = setInterval(rightBtnFun, 3000);// 定时器
 
 // 鼠标进入carousel 停止
-$carousel.mouseenter(function() {
+$carousel.mouseenter(function () {
   clearInterval(timer);// 停止timer
 });
 
 // 鼠标离开重新开启
-$carousel.mouseleave(function() {
+$carousel.mouseleave(function () {
   clearInterval(timer);// 设表先关
   timer = setInterval(rightBtnFun, 3000);// 重新开启
 });
@@ -27,16 +27,16 @@ $rightBtn.click(rightBtnFun);
 // 声明右按钮点击事件
 function rightBtnFun() {
   // 图片在运动，什么事情都不做
-  if($imgLis.is(":animated")) {
+  if ($imgLis.is(":animated")) {
     return;
   }
   // 图片不运动，才会执行这些语句
   // 老图消失
   $imgLis.eq(idx).fadeOut(800);
   // 信号量改变
-  idx ++;
+  idx++;
   // 验证
-  if(idx > amount - 1) {
+  if (idx > amount - 1) {
     idx = 0;
   }
   // 新图淡入
@@ -46,14 +46,14 @@ function rightBtnFun() {
 }
 
 // 左按钮点击事件
-$leftBtn.click(function() {
+$leftBtn.click(function () {
   // 图片在不运动才接收新任务
-  if(!$imgLis.is(":animated")) {
+  if (!$imgLis.is(":animated")) {
     // 老图淡入
     $imgLis.eq(idx).fadeOut(800);
     // 信号量改变
-    idx --;
-    if(idx < 0) {
+    idx--;
+    if (idx < 0) {
       idx = amount - 1;
     }
     // 新图淡入
@@ -65,7 +65,7 @@ $leftBtn.click(function() {
 
 // 小圆点鼠标进入事件
 // 防流氓 立即触发
-$circles.click(function() {
+$circles.click(function () {
   // 老图淡出
   $imgLis.eq(idx).stop(true).fadeOut();
   // 信号量改变 $(this)触发 的小圆点

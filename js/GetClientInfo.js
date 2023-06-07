@@ -1,7 +1,7 @@
 // 判断终端类型
 function judgeType() {
   var userAgent = window.navigator.userAgent;
-  (userAgent.indexOf("Android") > 0 || userAgent.indexOf("iPhone") > 0 || userAgent.indexOf("iPad") > 0) ? type = '移动端': type = 'PC端';
+  (userAgent.indexOf("Android") > 0 || userAgent.indexOf("iPhone") > 0 || userAgent.indexOf("iPad") > 0) ? type = '移动端' : type = 'PC端';
   return type;
 }
 
@@ -23,13 +23,13 @@ function judgeOS() {
     if (isWinXP) return "WinXP";
     var isWin2003 = osUserAgent.indexOf("Windows NT 5.2") > -1 || osUserAgent.indexOf("Windows 2003") > -1;
     if (isWin2003) return "Win2003";
-    var isWinVista= osUserAgent.indexOf("Windows NT 6.0") > -1 || osUserAgent.indexOf("Windows Vista") > -1;
+    var isWinVista = osUserAgent.indexOf("Windows NT 6.0") > -1 || osUserAgent.indexOf("Windows Vista") > -1;
     if (isWinVista) return "WinVista";
     var isWin7 = osUserAgent.indexOf("Windows NT 6.1") > -1 || osUserAgent.indexOf("Windows 7") > -1;
     if (isWin7) return "Win7";
     var isWin7 = osUserAgent.indexOf("Windows NT 6.2") > -1 || osUserAgent.indexOf("Windows 8") > -1;
     if (isWin7) return "Win8";
-    var isWin7 = osUserAgent.indexOf("Windows NT 6.4") > -1 || osUserAgent.indexOf("Windows NT 10.0") > -1  || osUserAgent.indexOf("Windows 10") > -1;
+    var isWin7 = osUserAgent.indexOf("Windows NT 6.4") > -1 || osUserAgent.indexOf("Windows NT 10.0") > -1 || osUserAgent.indexOf("Windows 10") > -1;
     if (isWin7) return "Win10";
   }
   return "other";
@@ -105,7 +105,7 @@ function getIP() {
   // var getIP = returnCitySN["cip"] + ',' + returnCitySN["cname"];
   // 获取IP
   var getIP = returnCitySN["cip"];
-  
+
   return getIP;
 }
 

@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
 
-* { box-sizing: border-box; }
+* {
+  box-sizing: border-box;
+}
 
 body {
   height: 100%;
@@ -20,7 +22,7 @@ body {
   transform: translate(-50%, -50%);
   width: 300px;
   height: 200px;
-  box-shadow: 3px 3px 10px rgba(0,0,0,.2);
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, .2);
 }
 
 .wrapper {
@@ -60,16 +62,20 @@ body {
 .slider.loaded .slide:nth-child(7) {
   background: #FFCF47;
 }
+
 .slider.loaded .slide:nth-child(1),
 .slider.loaded .slide:nth-child(6) {
   background: #7ADCEF;
 }
+
 .slider.loaded .slide:nth-child(3) {
   background: #F97C68;
 }
+
 .slider.loaded .slide:nth-child(4) {
   background: #a78df5;
 }
+
 .slider.loaded .slide:nth-child(5) {
   background: #ff8686;
 }
