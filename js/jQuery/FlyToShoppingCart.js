@@ -14,7 +14,13 @@ $(function () {
 
     // 新创建一个飞入购物车的商品图
     var addCar = $(".add-to-cart");
-    var img = addCar.parent(".goods-info-other").siblings().children("div.commodity-img").children("div.img-magnifier-container").children("#myImage").attr('src');
+    var img = addCar
+      .parent(".goods-info-other")
+      .siblings()
+      .children("div.commodity-img")
+      .children("div.img-magnifier-container")
+      .children("#myImage")
+      .attr('src');
 
     var flyer = $('<img class="u-flyer" src="' + img + '">');
     event.preventDefault();    // 阻止a链接的默认行为 
